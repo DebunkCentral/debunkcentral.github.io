@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { AlertTriangle, Mail, Twitter, Facebook, Instagram, Rss, Youtube } from 'lucide-react';
-
+import LOGO from '../../Images/logo.png';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
@@ -11,12 +11,12 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Logo and About */}
           <div className="md:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <AlertTriangle className="h-6 w-6 text-primary-400" />
-              <span className="font-heading text-xl font-bold text-white">
-                Debunk Central
-              </span>
-            </Link>
+          <Link to="/" className="flex items-center space-x-2">
+            <img src={LOGO} alt="Logo" className="h-14 w-14" />
+            <span className="font-heading text-xl font-bold text-primary-900">
+              Debunk Central
+            </span>
+          </Link>
             <p className="text-gray-400 mb-4">
               Your trusted source for fact-checking viral content. We debunk misinformation from social media, 
               provide evidence-based analysis, and empower you with verified facts.
